@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rite-Foot | Equipping Feet, Empowering Futures</title>
+    <meta name="description"
+        content="Rite-Foot provides underprivileged youth with football boots to unlock confidence and opportunity.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN for standalone usage as requested) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rite: {
+                            orange: '#FF6B35',
+                            teal: '#004E64',
+                            dark: '#1A1A1A',
+                            light: '#F7F7F7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-rite-light text-rite-dark font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold text-white tracking-wider flex items-center gap-2">
+                Rite-Foot <span class="text-rite-orange">.</span>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-white hover:text-rite-orange transition-colors font-medium">About</a>
+                <a href="#vision" class="text-white hover:text-rite-orange transition-colors font-medium">Vision</a>
+                <a href="#mission" class="text-white hover:text-rite-orange transition-colors font-medium">Mission</a>
+                <a href="#"
+                    class="bg-rite-orange text-white px-6 py-2 rounded-full font-bold hover:bg-orange-600 transition-transform transform hover:scale-105">Donate
+                    Boots</a>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-rite-dark/95 backdrop-blur-lg z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <a href="#about"
+                class="mobile-link text-2xl text-white font-heading font-bold hover:text-rite-orange transition-colors">About</a>
+            <a href="#vision"
+                class="mobile-link text-2xl text-white font-heading font-bold hover:text-rite-orange transition-colors">Vision</a>
+            <a href="#mission"
+                class="mobile-link text-2xl text-white font-heading font-bold hover:text-rite-orange transition-colors">Mission</a>
+            <a href="#"
+                class="mobile-link bg-rite-orange text-white px-8 py-3 rounded-full font-bold text-xl hover:bg-orange-600 transition-transform">Donate
+                Boots</a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero.png" alt="Old vs New Football Boots" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-rite-dark/70 via-rite-dark/50 to-rite-dark/80"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center text-white mt-16">
+            <h1 class="font-heading text-5xl md:text-7xl font-extrabold mb-6 leading-tight animate-fade-in-up">
+                Equipping Feet.<br>
+                <span
+                    class="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-rite-orange to-orange-400">Empowering
+                    Futures.</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-200 animate-fade-in-up delay-100">
+                Talent is everywhere—but opportunity is not. A simple pair of boots can unlock a future.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+                <a href="#mission"
+                    class="bg-rite-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-orange-500/30">
+                    See How We Help
+                </a>
+                <a href="#about"
+                    class="border-2 border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                    Our Story
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal-on-scroll">
+                    <div class="relative">
+                        <img src="assets/images/about.png" alt="Children playing football"
+                            class="rounded-2xl shadow-2xl relative z-10 w-full hover:scale-[1.02] transition-transform duration-500">
+                        <div class="absolute -bottom-6 -right-6 w-3/4 h-3/4 bg-rite-teal/10 rounded-2xl -z-0"></div>
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-rite-orange/10 rounded-full blur-2xl -z-0">
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-on-scroll delay-200">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-rite-dark mb-6">
+                        Talent Alone Is <br><span class="text-rite-teal">Not Enough.</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        In the heart of every aspiring footballer’s dream lies a simple truth. For many young players,
+                        poverty, lack of equipment, and limited resources stand in the way.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        <strong class="text-rite-dark">Rite-Foot</strong> believes change starts with a single gesture.
+                        By gifting high-quality football boots, we don’t just provide gear—we open doors to opportunity,
+                        discipline, and hope.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="h-1 w-20 bg-rite-orange rounded-full"></div>
+                        <p class="font-bold text-rite-dark uppercase tracking-widest text-sm">Our Philosophy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-24 bg-rite-dark text-white relative overflow-hidden">
+        <!-- Background Image Parallax Effect (Simulated via CSS/JS) -->
+        <div class="absolute inset-0 opacity-20">
+            <img src="assets/images/vision.png" alt="Tying laces" class="w-full h-full object-cover">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="max-w-4xl mx-auto reveal-on-scroll">
+                <h2 class="font-heading text-4xl md:text-6xl font-bold mb-8">
+                    A World Where Talent<br>
+                    <span class="text-rite-orange">Not Circumstance</span>Decides Success.
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+                    We believe the difference between a street ball legend and a professional contract should be
+                    skill not the lack of shoes.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-white/10 pt-12">
+                    <div>
+                        <span class="block text-4xl mb-2">🎓</span>
+                        <p class="font-bold text-sm uppercase tracking-wider text-gray-400">Education</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl mb-2">🤝</span>
+                        <p class="font-bold text-sm uppercase tracking-wider text-gray-400">Mentorship</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl mb-2">🦁</span>
+                        <p class="font-bold text-sm uppercase tracking-wider text-gray-400">Leadership</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl mb-2">⭐</span>
+                        <p class="font-bold text-sm uppercase tracking-wider text-gray-400">Self-Belief</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-24 bg-rite-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="font-heading text-4xl font-bold text-rite-dark mb-4">Our Mission</h2>
+                <p class="text-xl text-rite-teal font-medium">"Equipping Feet, Empowering Futures"</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1: Supply -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group reveal-on-scroll delay-100 border-b-4 border-transparent hover:border-rite-orange">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition-transform">
+                        ⚽
+                    </div>
+                    <h3 class="text-2xl font-bold text-rite-dark mb-4 group-hover:text-rite-orange transition-colors">
+                        Supply</h3>
+                    <p class="text-gray-600">
+                        Provide high-quality, age-appropriate boots to youth across <strong>Africa, Latin America, & SE
+                            Asia</strong>.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Educate -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group reveal-on-scroll delay-200 border-b-4 border-transparent hover:border-rite-orange">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition-transform">
+                        📘
+                    </div>
+                    <h3 class="text-2xl font-bold text-rite-dark mb-4 group-hover:text-rite-orange transition-colors">
+                        Educate</h3>
+                    <p class="text-gray-600">
+                        Pair donations with coaching on skills, injury prevention, teamwork, and discipline.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Connect -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group reveal-on-scroll delay-300 border-b-4 border-transparent hover:border-rite-orange">
+                    <div
+                        class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition-transform">
+                        🤝
+                    </div>
+                    <h3 class="text-2xl font-bold text-rite-dark mb-4 group-hover:text-rite-orange transition-colors">
+                        Connect</h3>
+                    <p class="text-gray-600">
+                        Digital <strong>Boot-Buddy Network</strong> connecting recipients with mentors & opportunities.
+                    </p>
+                </div>
+
+                <!-- Pillar 4: Sustain -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow group reveal-on-scroll delay-400 border-b-4 border-transparent hover:border-rite-orange">
+                    <div
+                        class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition-transform">
+                        ♻️
+                    </div>
+                    <h3 class="text-2xl font-bold text-rite-dark mb-4 group-hover:text-rite-orange transition-colors">
+                        Sustain</h3>
+                    <p class="text-gray-600">
+                        A <strong>revolving-stock model</strong> where boots are refurbished and passed on as players
+                        grow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="py-24 bg-rite-orange text-white text-center relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 reveal-on-scroll">
+                More Than Equipment.
+            </h2>
+            <p class="text-2xl md:text-3xl font-light mb-10 max-w-3xl mx-auto reveal-on-scroll">
+                It’s a <span class="font-bold underline decoration-white/30 decoration-4 underline-offset-4">starting
+                    line</span>, not a finish line.
+            </p>
+            <button
+                class="bg-white text-rite-orange px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl reveal-on-scroll">
+                Partner With Us
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rite-dark text-white py-12 border-t border-white/10">
+        <div
+            class="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <a href="#" class="text-2xl font-heading font-bold tracking-wider">
+                    Rite-Foot <span class="text-rite-orange">.</span>
+                </a>
+                <p class="text-gray-400 mt-2 text-sm">Empowering the next generation.</p>
+            </div>
+            <div class="flex gap-8 text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+        <div class="text-center text-gray-600 text-sm mt-12">
+            &copy; 2026 kuino. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
